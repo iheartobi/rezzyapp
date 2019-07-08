@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
           @error = "Username and password did not match our records."
           render :new
         end
-      end
+    end
     
-      def destroy
+    def destroy
         session[:user_id] = nil
         redirect_to reservations_path
-      end
+    end
 end
