@@ -6,14 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-patrick, squidward, spongebob, gary, krabs
-krusty_krab - american, chum bucket - italian, goofy_goobers - ice cream
+User.create(name: "patrick")
+User.create(name: "squidward")
+User.create(name: "spongebob")
+User.create(name: "gary")
+User.create(name: "krabs")
+User.create(name: "lisa")
+User.create(name: "marge")
+User.create(name: "homer")
+User.create(name: "bart")
+User.create(name: "maggie")
+User.create(name: "stan")
+User.create(name: "kyle")
+User.create(name: "kenny")
+User.create(name: "kartman")
+User.create(name: "kennys mom")
+User.create(name: "tina")
+User.create(name: "bob")
+User.create(name: "louise")
+User.create(name: "linda")
+User.create(name: "gene")
 
-lisa, marge, homer, bart, maggie
-krusty_burger - american, kwik-e-mart - ice cream, moes - bar
+Restaurant.create(name: "krusty krab", location: "bikini bottom", type: "american")
+Restaurant.create(name: "chum bucket", location: "bikini bottom" type: "italian")
+Restaurant.create(name: "goofy goobers", location: "bikini bottom" type: "ice cream")
 
-stan, kyle, kenny, kartman, kennys_mom
+Restaurant.create(name: "krusty burger" american, kwik-e-mart - ice cream, moes - bar
+
 bennys - mexican, chefs_cafateria - american, city_wok - chinese
 
-tina, bob, louise, linda, gene
 bobs_burgers - american, falafel_waffle - breakfast, jimmy_pestos - italian
