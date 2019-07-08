@@ -28,11 +28,17 @@ User.create(name: "linda")
 User.create(name: "gene")
 
 Restaurant.create(name: "krusty krab", location: "bikini bottom", type: "american")
-Restaurant.create(name: "chum bucket", location: "bikini bottom" type: "italian")
-Restaurant.create(name: "goofy goobers", location: "bikini bottom" type: "ice cream")
+Restaurant.create(name: "chum bucket", location: "bikini bottom", type: "italian")
+Restaurant.create(name: "goofy goobers", location: "bikini bottom", type: "ice cream")
 
-Restaurant.create(name: "krusty burger" american, kwik-e-mart - ice cream, moes - bar
+Restaurant.create(name: "krusty burger", location: "springfield", type: "american")
+Restaurant.create(name: "kwik-e-mart", location: "springfield", type: "ice cream")
+Restaurant.create(name: "moes", location: "springfield", type: "bar")
 
-bennys - mexican, chefs_cafateria - american, city_wok - chinese
+Restaurant.create(name: "bennys", location: "south park", type: "mexican")
+Restaurant.create(name: "chefs cafateria", location: "south park", type: "american")
+Restaurant.create(name: "city wok", location: "south park", type: "chinese")
 
-bobs_burgers - american, falafel_waffle - breakfast, jimmy_pestos - italian
+Restaurant.create(name: "bobs burgers", location: "long island", type: "american")
+Restaurant.create(name: "falafel waffle", location: "long island", type: "breakfast")
+Restaurant.create(name: "jimmy pestos", location: "long island", type: "italian")
