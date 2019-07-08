@@ -3,8 +3,8 @@ class CreateReservations < ActiveRecord::Migration[5.2]
     create_table :reservations do |t|
       t.datetime :time
       t.text :review
-      t.references :user_id
-      t.references :restaurant_id
+      t.references :user
+      t.references :restaurant
 
 
       t.timestamps

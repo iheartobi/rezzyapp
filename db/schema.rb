@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 2019_07_08_165853) do
   create_table "reservations", force: :cascade do |t|
     t.datetime "time"
     t.text "review"
-    t.integer "user_id_id"
-    t.integer "restaurant_id_id"
+    t.integer "user_id"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["restaurant_id_id"], name: "index_reservations_on_restaurant_id_id"
-    t.index ["user_id_id"], name: "index_reservations_on_user_id_id"
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
