@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+    before_action :authenticate!, except: [:index, :show]
 
     def index 
         @reservations = Reservation.all
