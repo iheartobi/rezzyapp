@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
           flash[:info] = "Welcome #{@user}!"
           redirect_to reservation_path(@user)
         else
-          @error = "Username and password did not match our records."
+          @error = "Username and password did not match our records. Please try again."
           render :new
         end
     end
