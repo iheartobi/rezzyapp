@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_155215) do
+ActiveRecord::Schema.define(version: 2019_07_09_203310) do
 
   create_table "follows", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followee_id"
+  end
+
+  create_table "menu_items", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.string "img_url"
+    t.integer "restaurant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_menu_items_on_restaurant_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -39,9 +49,9 @@ ActiveRecord::Schema.define(version: 2019_07_09_155215) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
