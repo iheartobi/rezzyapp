@@ -2,7 +2,9 @@ class CreateReservations < ActiveRecord::Migration[5.2]
   def change
     create_table :reservations do |t|
       t.datetime :time
-      t.text :review
+      t.string :name
+      t.string :restaurant
+      t.string :review
       t.references :user
       t.references :restaurant
 

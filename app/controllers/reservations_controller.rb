@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-    before_action :authenticate!, except: [:index, :show]
+    # before_action :authenticate!
 
     def index 
         @reservations = Reservation.all
@@ -41,11 +41,12 @@ class ReservationsController < ApplicationController
             redirect_to reservations_path
          else 
             render :edit
+         end
     end
 
     private
 
     def reservation_params
-        params.require(:reservation).permit(:name, :username, :password)
+        params.require(:reservation).permit(:time, :name, :restaurant, :review)
     end
 end

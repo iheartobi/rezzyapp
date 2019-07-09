@@ -5,7 +5,7 @@ get '/login', to: 'sessions#new'
 post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
 resources :restaurants
-resources :menu_items
+resources :menu_items, only: [:index, :show]
 resources :users
 resources :reservations
 resources :followee
