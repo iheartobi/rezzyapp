@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 resources :restaurants
 resources :reviews
 resources :users
-resources :foodtypes
 resources :reservations
 
 end
