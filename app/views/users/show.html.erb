@@ -1,5 +1,30 @@
+
+<h1>Name: <%=@user.name%></h1><br>
+<br>
+<p>Username: <%=h @user.username %></p>
+<p><%= link_to "Find Friends", users_path %></p>
+
+<h3>Your Friends</h3>
+<ul>
+  <% for user in @user.friends %>
+  <li><%= h user.username %></li>
+  <% end %>  
+</ul>
+
+<h3>Your Friends</h3>
+<ul>
+  <% for friendship in @user.friendships %>
+  <li>
+    <%= h friendship.friend.username %>
+    (<%= link_to "remove", friendship, :method => :delete %>)
+  </li>
+  <% end %>  
+</ul>
+
+=======
 <h1>Your Profile</h1>
 <h2>Username: <%= @user.username %></h2>
+
 
 <h2>Name: <%=@user.name%></h2><br>
 <br>
