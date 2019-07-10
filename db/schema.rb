@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_203310) do
+ActiveRecord::Schema.define(version: 2019_07_10_134931) do
 
-  create_table "follows", force: :cascade do |t|
-    t.integer "follower_id"
-    t.integer "followee_id"
+  create_table "friendships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "menu_items", force: :cascade do |t|

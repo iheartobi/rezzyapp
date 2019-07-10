@@ -5,3 +5,13 @@
     <li><%= link_to(user.name, user_path(user)) %></li>
   <% end %>
 </ul>
+
+<% for user in @users %>
+  <div class="user">
+    <p>
+      <strong><%=h user.username %></strong>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+      <div class="clear"></div>
+    </p>
+  </div>
+<% end %>

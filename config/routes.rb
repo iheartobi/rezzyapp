@@ -8,7 +8,7 @@ resources :restaurants
 resources :menu_items, only: [:index, :show]
 resources :users
 resources :reservations
-resources :followee
+resources :friendships
 
 
 end
