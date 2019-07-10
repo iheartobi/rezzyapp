@@ -11,7 +11,20 @@ class FriendshipsController < ApplicationController
           flash[:notice] = "Unable to add friend."
           redirect_to users_path
         end
+<<<<<<< HEAD
     end
+=======
+
+    end
+
+    def destroy
+        @friendship = current_user.friendships.find(params[:id])
+        @friendship.destroy
+        flash[:notice] = "Removed friendship."
+        redirect_to current_user
+      end
+
+>>>>>>> f1c8bc937869d96d785be25c62e7905d3fbaf883
       
 
 
