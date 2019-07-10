@@ -20,5 +20,10 @@
   <% end %>  
 </ul>
 
+<h1>Your Profile</h1>
+<h2>Username: <%= @user.username %></h2>
 
-<%= link_to("All Users", users_path) %>
+<h2>Name: <%=@user.name%></h2><br>
+<br>
+<h3><%= link_to "Find Friends", users_path %></h3>
+<h3><%= link_to("All Users", users_path) %></h3>
