@@ -1,11 +1,15 @@
 class SessionsController < ApplicationController
 
+    def new
+    end
+
     def create
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
+          puts session[:user_id]
           flash[:info] = "Welcome #{@user}!"
-          redirect_to reservation_path(@user)
+          redirect_to user_path(@user)
         else
           @error = "Username and password did not match our records. Please try again."
           render :new
