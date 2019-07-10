@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    # before_action :authenticate!, except: [:index, :show]
+    #  before_action :authenticate!, except: [:index, :show]
 
     def index 
         @users = User.all
@@ -14,9 +14,10 @@ class UsersController < ApplicationController
     end
 
     def create 
-        @user = User.new
+        @user = User.new(user_params)
         if @user.save
-            redirect_to users_path
+            session[:user_id] = @user.id
+            redirect_to user_path(@user)
         else
             render :new
         end
