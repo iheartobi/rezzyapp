@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
     
       def authenticate!
         unless current_user
-          puts "Login Failed!!!!!!!!!!!!!!!!!!!!!!!!!"
           flash[:info] = "You have to be logged in to do that!"
           redirect_to users_path
         end
