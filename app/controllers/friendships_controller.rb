@@ -20,6 +20,8 @@ class FriendshipsController < ApplicationController
         redirect_to current_user
       end
 
+      
+
 
 
 end
