@@ -1,3 +1,5 @@
 <h1>Restaurant name: <%=@restaurant.name%></h1>
 <h2>Location: <%=@restaurant.location%></h2>
 <h2>Type of food: <%=@restaurant.food_type%></h2>
+
+<%= link_to("Menu Items", menu_item_path(menu_item)) %>

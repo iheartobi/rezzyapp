@@ -10,11 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_165853) do
+ActiveRecord::Schema.define(version: 2019_07_10_134931) do
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "menu_items", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.string "img_url"
+    t.integer "restaurant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_menu_items_on_restaurant_id"
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.datetime "time"
-    t.text "review"
+    t.string "name"
+    t.string "restaurant"
+    t.string "review"
     t.integer "user_id"
     t.integer "restaurant_id"
     t.datetime "created_at", null: false
@@ -33,8 +52,10 @@ ActiveRecord::Schema.define(version: 2019_07_08_165853) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
