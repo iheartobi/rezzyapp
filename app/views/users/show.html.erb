@@ -1,25 +1,25 @@
 <h1>Name: <%= @user.name %></h1>
 <h3>Username: <%=h @user.username %></h3>
 
-<% @user.friendships.each do |friend| %>
-<%= friend.name %>
-<% end %>
+<%# <% @user.friendships.each do |friend| %>
+<%# <%= friend.name %>
+<%# <% end %> 
 <%# <ul>
   <% for user in @user.friends %>
   <%# <li><%=  user.username %></li>
    
 <%# </ul> %>
 
-<h3>Your Friends</h3>
+<%# <h3>Your Friends</h3>
 <ul>
   <% @user.friends.each do |friend| %>
-  <li><%= link_to(friend.username, user_path(friend)) %></li>
-  <% end %>
+  <%# <li><%= link_to(friend.username, user_path(friend)) %></li>
+  <%# <% end %>
 
     <%# <%=  friendship.friend.username %>
     <%# (<%= link_to "remove", friendship, :method => :delete %>
 
 </ul>
-<h5><%= link_to("Create Reservation", reservations_path) %></h5>
-<h5><%= link_to("All Users", users_path) %></h5>
+<h5><%= link_to("Create Reservation", new_reservation_path) %></h5>
+<h5><%= link_to("Find Restaurant", restaurants_path) %></h5>
 <h5><%= link_to "Find Friends", users_path %></h5>

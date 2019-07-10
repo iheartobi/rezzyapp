@@ -1,3 +1,5 @@
 <h1>Menu Item: <%=@menu_item.name%></h1>
 <h2>Price: <%= @menu_item.price%></h2>
 <h3><%= image_tag @menu_item.img_url%></h3>
+
+<%= link_to("Back to Items", menu_items_path) %>
