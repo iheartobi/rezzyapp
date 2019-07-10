@@ -36,7 +36,7 @@ Restaurant.create(name: "kwik-e-mart", location: "springfield", food_type: "ice 
 Restaurant.create(name: "moes", location: "springfield", food_type: "bar")
 
 Restaurant.create(name: "bennys", location: "south park", food_type: "mexican")
-Restaurant.create(name: "chefs cafateria", location: "south park", food_type: "american")
+Restaurant.create(name: "chefs cafeteria", location: "south park", food_type: "american")
 Restaurant.create(name: "city wok", location: "south park", food_type: "chinese")
 
 Restaurant.create(name: "bobs burgers", location: "long island", food_type: "american")
