@@ -1,0 +1,19 @@
+<% if @reservation.errors.present? %>
+  <ul>
+    <% @reservation.errors.full_messages.each do |msg| %>
+      <strong><li style="color: red"><%= msg %></li></strong>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@reservation) do |f| %>
+<%= f.label "Time" %><br>
+<%= f.datetime_select :time %><br>
+<%= f.label "Name" %><br>
+<%= f.text_field :name %><br>
+<%= f.label "Restaurant" %><br>
+<%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name)%><br><br>
+<%= f.submit  %>
+<% end %>
+
+

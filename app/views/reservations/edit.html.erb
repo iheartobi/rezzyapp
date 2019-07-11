@@ -1,0 +1,13 @@
+<h1>Change Your Reservation</h1>
+
+<%= form_for(@reservation) do |f| %>
+<%= f.label "Time" %><br>
+<%= f.datetime_select :time %><br>
+<%= f.label "Name" %><br>
+<%= f.text_field :name %><br>
+<%= f.label "Restaurant" %><br>
+<%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name)%><br>
+<%= f.label "Review" %><br>
+<%= f.text_area :review %><br>
+<%= f.submit  %>
+<% end %>
