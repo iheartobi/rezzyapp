@@ -79,5 +79,5 @@ MenuItem.create(name: "chicken and waffles", price: 7, img_url:"https://purewows
 MenuItem.create(name: "slice of pesto and pepperoni", price: 9, img_url:"https://media-cdn.tripadvisor.com/media/photo-s/0a/4e/d4/0d/slice-pepperoni-and-pesto.jpg", restaurant_id: Restaurant.find_by(:name => "jimmy pestos").id)
 MenuItem.create(name: "the monstrosity", price: 12, img_url:"https://i.ytimg.com/vi/As6YArlBpR0/maxresdefault.jpg", restaurant_id: Restaurant.find_by(:name => "jimmy pestos").id)
 
-Reservation.create()
+
 
